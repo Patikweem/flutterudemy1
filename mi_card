@@ -1,0 +1,178 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xFFfafafa),
+        body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('images/bg.png'),
+                  fit: BoxFit.cover,
+                  opacity: 0.6)),
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Center(
+                  child: const Image(image: AssetImage('images/map.png')),
+                ),
+                CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage('images/patrickm.jpg'),
+                ),
+                SizedBox(
+                  height: 16.0.px,
+                ),
+                Text(
+                  'PATRICK MENDOZA',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 24.0,
+                      color: Color(0xFF171717),
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.0),
+                ),
+                Text(
+                  'UI/UX DESIGNER - FLUTTER DEVELOPER',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontFamily: 'Inter',
+                    fontSize: 14.0,
+                    color: Color(0xFF7D8E94),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 16.0.px,
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.smartphone_outlined,
+                        size: 24.0,
+                        color: Color(0xFF2887BC),
+                      ),
+                      SizedBox(
+                        width: 12.0,
+                      ),
+                      Container(
+                        color: Color(0xFF2887BC),
+                        height: 24.0,
+                        child: VerticalDivider(
+                          indent: 15.0.px,
+                          endIndent: 15.0.px,
+                          color: Color(0xFF2887BC),
+                          thickness: 1.5,
+                          width: 2.0,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 12.0,
+                      ),
+                      Text(
+                        '+63917-987-3939',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.only(
+                    top: 16.0.px,
+                    bottom: 16.0.px,
+                    left: 24.0.px,
+                    right: 24.0.px,
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFF2887BC), width: 2),
+                      borderRadius: BorderRadius.circular(15.0)),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 8.0,
+                    horizontal: 24.0,
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.email_outlined,
+                        size: 24.0,
+                        color: Color(0xFF2887BC),
+                      ),
+
+                      ///email
+                      SizedBox(
+                        width: 12.0,
+                      ),
+
+                      ///space
+                      Container(
+                        color: Color(0xFF2887BC),
+                        height: 24.0,
+                        child: VerticalDivider(
+                          indent: 15.0.px,
+                          endIndent: 15.0.px,
+                          color: Color(0xFF2887BC),
+                          thickness: 1.5,
+                          width: 2.0,
+                        ),
+                      ),
+
+                      ///Divider
+                      SizedBox(
+                        width: 12.0,
+                      ),
+
+                      ///space
+                      SizedBox(
+                        width: 220.0.px,
+                        child: Text(
+                          'patrick.mendoza@cartera.com.ph',
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+
+                      ///Email
+                    ],
+                  ),
+                  padding: EdgeInsets.only(
+                    top: 16.0.px,
+                    bottom: 16.0.px,
+                    left: 24.0.px,
+                    right: 24.0.px,
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFF2887BC), width: 2),
+                      borderRadius: BorderRadius.circular(15.0)),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 8.0,
+                    horizontal: 24.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
